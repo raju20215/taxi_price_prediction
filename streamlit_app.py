@@ -14,8 +14,8 @@ from sklearn.ensemble import RandomForestRegressor
 # -------------------------------
 @st.cache_resource
 def load_model():
-    with open("model_pipeline.pkl", "rb") as file:
-        return pickle.load(file)
+    with open("model_pipeline.joblib", "rb") as file:
+        return joblib.load(file)
 
 model = load_model()
 
