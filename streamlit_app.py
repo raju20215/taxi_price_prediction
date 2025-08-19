@@ -3,6 +3,11 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OrdinalEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.ensemble import RandomForestRegressor
 
 # -------------------------------
 # Load your trained model
@@ -54,6 +59,6 @@ if st.button("🔮 Predict Fare"):
     }])
     
     # Make prediction
-    preprediction = model.predict(input_data)
+    prediction = model.predict(input_data)
     
-    st.success(f"💰 Estimated Trip Price: **₹{prediction:.2f}**")
+    st.success(f"💰 Estimated Trip Price: ₹{prediction[0]:.2f}")
