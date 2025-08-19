@@ -1,4 +1,5 @@
 # streamlit_app.py
+from sklearn.utils.parallel import joblib
 import streamlit as st
 import numpy as np
 import pandas as pd
