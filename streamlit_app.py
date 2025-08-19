@@ -54,6 +54,6 @@ if st.button("🔮 Predict Fare"):
     }])
     
     # Make prediction
-    preprediction = pipeline.predict(input_data)
+    preprediction = model.predict(input_data)
     
     st.success(f"💰 Estimated Trip Price: **₹{prediction:.2f}**")
